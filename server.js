@@ -16,10 +16,6 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended: true}))
 
-// app.get('', (req,res)=>{
-//     res.send("welcome user!!!!!")
-// })
-
 app.get('/getAllUsers', (req,res)=>{
     User.findAll().then(data=>{
         res.send(data)
